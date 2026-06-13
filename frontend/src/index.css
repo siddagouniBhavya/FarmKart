@@ -1,0 +1,36 @@
+*{
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  html,body{
+    height: 100%;
+    width: 100%;
+    overflow-x:"hidden"
+  }
+/* calender design */
+
+.booked-day {
+ background-color: #ef4444 !important;
+ color : white !important;
+ border-radius: 9999px !important
+}
+
+
+.available-day {
+ background-color: #dcfce7 !important;
+  border-radius: 9999px !important;
+}
+
+.react-datepicker__day--highlighted-custom-1 {
+  background-color: #ef4444 !important;
+  color: white !important;
+ 
+}
+
+.react-datepicker__day--disabled {
+  color: #cbd5e1 !important;
+}
+
+.react-datepicker-popper {
+  z-index: 9999;
+}
