@@ -15,7 +15,7 @@ connectDb()
 const app=express()
 app.use(express.json())
 app.use(cors({
-    origin:"https://farm-kart-self.vercel.app/",
+    origin:"https://farm-kart-self.vercel.app",
     credentials:true
 }))
 
