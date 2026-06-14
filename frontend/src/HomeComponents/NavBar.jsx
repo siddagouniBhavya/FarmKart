@@ -40,7 +40,7 @@ const NavBar=()=>
                     <a className="active:gray-200" onClick={()=>{navigate('/equipmentlist')}}>Equipments</a>
                     {/* <a className="active:text-gray-200">About us</a> */}
                     <a className="active:text-gray-200" onClick={()=>{navigate("/login")}}>Login</a>
-                    <button className="bg-white text-green-600 px-4 py-2 rounded-lg active:scale-105">Register</button>
+                    <button className="bg-white text-green-600 px-4 py-2 rounded-lg active:scale-105" onClick={()=>{navigate("/register")}}>Register</button>
                 </div>
               )}
 

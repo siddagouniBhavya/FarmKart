@@ -8,6 +8,7 @@ export const getSingleEquipment=async(id)=>{
     const res=await apiClient.get(`/equipment/singleEquipment/${id}` )
     return res.data
 }
+
 //order
 export const createBooking=async(id,data)=>{
     const res=await apiClient.post(`/order/createBooking/${id}`,
