@@ -40,7 +40,7 @@ async function registerUser(req,res){
         username,email,password:hash,contact,role:"user",status:"approved",location
     })
     const token=jwt.sign({id:user._id,email:user.email},process.env.JWT_SECRET)
-    res.cookie("token",token)
+    res.cookie("token",token,{httpOnly:true,secure:true,sameSite:"none"})
     
     if(admin){
         //add notification
@@ -104,11 +104,10 @@ async function loginUser(req, res) {
         // Generate token ONLY if approved
         const token = jwt.sign(
             { id: user._id, email: user.email },
-            process.env.JWT_SECRET,
-            { expiresIn: "2d" }
+            process.env.JWT_SECRET
         );
 
-        res.cookie("token", token);
+        res.cookie("token", token,{httpOnly:true,secure:true,sameSite:"none"});
 
         return res.status(200).json({
             message: "Login successful",
